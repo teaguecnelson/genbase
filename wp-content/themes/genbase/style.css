@@ -1,0 +1,16 @@
+/*
+ Theme Name:   genbase
+ Theme URI:    https://github.com/teaguecnelson/genbase
+ Description:  base genesis child theme
+ Author:       Teague Nelson
+ Author URI:   http://teaguenelson.com
+ Template:     genesis
+ Version:      1.0.0
+ License:      GNU General Public License v3 or later
+ License URI:  http://www.gnu.org/licenses/gpl-3.0.html
+ Tags:         
+ Text Domain:  genbase
+*/
+body {
+  margin: 0;
+  background-color: #bada55; }
