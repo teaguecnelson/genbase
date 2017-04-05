@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Roboto');
+
+// Font Sizes
+$base-font-size: 18px;
+$small-point-size: $base-font-size * 0.825;
+
+// Font Families
+$primary-font: 'Roboto', Helvetica, Arial, sans-serif;
+$secondary-font:'Source Sans Pro', serif;
+
+/* --------  Extends Regular Fonts  -------- */
+
+%primary-font-regular {
+    font-family: $primary-font;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+}
+
+%secondary-font-regular {
+    font-family: $secondary-font;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --------  Extends Bold Fonts  -------- */
+
+%primary-font-bold {
+    font-family: $primary-font;
+    font-weight: 700;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+}
+
+%secondary-font-bold {
+    font-family: $secondary-font;
+    font-weight: 700;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+}

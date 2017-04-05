@@ -1,0 +1,35 @@
+//Variables
+
+// Typography see _typography in helpers
+
+// Main Colors
+$main-blue: #2c98bc;
+$darken-main-blue: darken($main-blue, 20%);
+$charcoal: #4d4c4c;
+$text-color: #2c2d30;
+
+// Base Colors
+$black: #000;
+$white: #fefefe;
+$primary-mask: transparentize($main-blue, 0.3);
+$transparent: rgba(255, 255, 255, 0.1);
+
+// Vendor Variables
+// Font Awesome Icons
+$fa-caret-down: '\f0d7';
+$fa-caret-up: '\f0d8';
+$fa-search: '\f002';
+$fa-star: '\f005';
+$fa-times: '\f00d';
+$fa-exclamation-triangle: '\f071';
+
+// Atom Variables
+
+
+// Molecule Variables
+
+
+// Organism Variables
+$header-height: 75px;
+$footer-height: 5rem;
+$home-hero-height: 75vh;

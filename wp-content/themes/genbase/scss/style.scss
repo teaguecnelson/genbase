@@ -12,10 +12,18 @@
  Text Domain:  genbase
 */
 
+// Global
+@import "helpers/variables";
+@import "helpers/flex_grid";
+@import "helpers/typography";
+@import "helpers/global";
+@import "helpers/transitions";
 
-$badass: #bada55;
+// Atoms
 
-body { 
-  margin: 0; 
-  background-color: $badass; 
-}
+// Organisms
+@import "organisms/header";
+@import "organisms/footer";
+
+// Pages
+@import "pages/front_page";
