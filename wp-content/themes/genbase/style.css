@@ -61,9 +61,54 @@
 /**
  * Spacing mixin to create uniform margin/padding
  */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro|Roboto");
+.content-sidebar-wrap, .site-header .wrap, .content-sidebar .content,
+.sidebar-content .content, .content-sidebar .sidebar,
+.sidebar-content .sidebar, .header-widget-area, .title-area {
+  display: flex;
+  display: -webkit-flex; }
+
 /**
  * Row wrapper class, flex box parent.
  */
+.content-sidebar-wrap, .site-header .wrap {
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media only screen and (min-width: 768px) {
+    .content-sidebar-wrap, .site-header .wrap {
+      margin-left: -0.75rem;
+      margin-right: -0.75rem; } }
+  @media only screen and (min-width: 768px) {
+    .content-sidebar-wrap, .site-header .wrap {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
+
+.content-sidebar .content,
+.sidebar-content .content, .content-sidebar .sidebar,
+.sidebar-content .sidebar, .header-widget-area, .title-area {
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  -webkit-flex-direction: column;
+  -webkit-flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  @media only screen and (min-width: 768px) {
+    .content-sidebar .content,
+    .sidebar-content .content, .content-sidebar .sidebar,
+    .sidebar-content .sidebar, .header-widget-area, .title-area {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem; } }
+
 /**
  * Generate a set of grid column placeholders using a namespace
  *
@@ -76,7 +121,58 @@
  * Step 1, for each namespace, create the grid-base
  * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
  */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro|Roboto");
+.content-sidebar .content,
+.sidebar-content .content, .content-sidebar .sidebar,
+.sidebar-content .sidebar, .header-widget-area {
+  flex-basis: 100%;
+  max-width: 100%;
+  -webkit-flex-basis: 100%; }
+
+.content-sidebar .content,
+.sidebar-content .content, .content-sidebar .sidebar,
+.sidebar-content .sidebar, .header-widget-area {
+  margin-left: 0%; }
+
+@media only screen and (min-width: 768px) {
+  .content-sidebar .sidebar,
+  .sidebar-content .sidebar {
+    flex-basis: 25%;
+    max-width: 25%;
+    -webkit-flex-basis: 25%; }
+  .title-area {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+    -webkit-flex-basis: 33.33333%; }
+  .header-widget-area {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+    -webkit-flex-basis: 66.66667%; }
+  .content-sidebar .content,
+  .sidebar-content .content {
+    flex-basis: 75%;
+    max-width: 75%;
+    -webkit-flex-basis: 75%; }
+  .content-sidebar .content,
+  .sidebar-content .content, .content-sidebar .sidebar,
+  .sidebar-content .sidebar, .title-area, .header-widget-area {
+    margin-left: 0%; } }
+
+@media only screen and (min-width: 1100px) {
+  .content-sidebar .sidebar,
+  .sidebar-content .sidebar {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+    -webkit-flex-basis: 33.33333%; }
+  .content-sidebar .content,
+  .sidebar-content .content {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+    -webkit-flex-basis: 66.66667%; }
+  .content-sidebar .content,
+  .sidebar-content .content, .content-sidebar .sidebar,
+  .sidebar-content .sidebar {
+    margin-left: 0%; } }
+
 /* --------  Extends Regular Fonts  -------- */
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -113,17 +209,278 @@ img {
 main {
   flex: 1; }
 
-.title-area {
-  height: 75px;
-  background-color: green; }
+.site-inner,
+.wrap {
+  margin: 0 auto; }
 
-.site-description {
-  display: none; }
+.site-inner {
+  word-wrap: break-word; }
 
-.site-footer {
-  background-color: green;
-  height: 5rem; }
+.content-sidebar-wrap {
+  padding: 0; }
+  @media only screen and (min-width: 768px) {
+    .content-sidebar-wrap {
+      margin: 0 2rem; } }
+
+.content-sidebar .content,
+.sidebar-content .content {
+  display: flex;
+  background-color: blue; }
+
+.content-sidebar .sidebar,
+.sidebar-content .sidebar {
+  display: flex; }
+
+.full-width-content .content {
+  width: 100%; }
 
 .home-hero {
   background-image: url("././images/sleeping_home.png");
   height: 75vh; }
+
+.site-header {
+  /*	height: $header-height;*/
+  background-color: green;
+  border-bottom: 1px solid black; }
+
+.site-header .wrap {
+  padding: 0;
+  width: 100%;
+  margin: auto; }
+
+.title-area {
+  display: flex;
+  border: 1px solid black; }
+
+.header-widget-area {
+  display: flex;
+  border: 1px solid blue; }
+
+/*--------------------------------------------- */
+/* ## Nav Responsive Styling
+/* Based on Robin Cornett's solution for mobile menu
+ https://robincornett.com/genesis-responsive-menu/
+------------------------------------------------*/
+/* Navigation toggles
+--------------------------------------------- */
+.sub-menu-toggle,
+.menu-toggle {
+  display: none;
+  visibility: hidden; }
+
+@media only screen and (max-width: 768px) {
+  nav {
+    display: none;
+    position: relative; }
+  nav .wrap {
+    padding: 0; }
+  nav.pagination {
+    display: block; }
+  .menu-toggle,
+  .sub-menu-toggle {
+    display: block;
+    visibility: visible;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    background-color: transparent; }
+  .menu-toggle {
+    background-color: #333;
+    position: relative;
+    padding: 20px 12px;
+    right: 0;
+    z-index: 1000;
+    color: white;
+    width: 100%; }
+  .menu-toggle:before,
+  .menu-toggle.activated:before {
+    display: inline-block;
+    font: normal normal normal 20px FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    content: "\f0c9";
+    padding-right: 12px; }
+  .sub-menu-toggle {
+    background: transparent;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 18px;
+    z-index: 100; }
+  .sub-menu-toggle:before {
+    display: inline-block;
+    font: normal normal normal 16px FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    content: "\f107"; }
+  .sub-menu-toggle.activated:before {
+    content: "\f106"; }
+  .genesis-nav-menu .menu-item {
+    display: block;
+    position: relative;
+    text-align: left; }
+  .genesis-nav-menu .menu-item a {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 20px; }
+  .genesis-nav-menu .menu-item:hover {
+    position: relative; }
+  .genesis-nav-menu .menu-item > a:focus ul.sub-menu,
+  .genesis-nav-menu .menu-item > a:focus ul.sub-menu .sub-menu {
+    left: 0;
+    margin-left: 0; }
+  .genesis-nav-menu > .menu-item-has-children > a:after {
+    content: none; }
+  .genesis-nav-menu .sub-menu {
+    display: none;
+    clear: both;
+    margin: 0;
+    position: static;
+    width: 100%;
+    opacity: 1; }
+  .genesis-nav-menu .sub-menu .sub-menu {
+    margin: 0; }
+  .genesis-nav-menu .sub-menu a {
+    border-left: none;
+    border-right: none;
+    padding-left: 40px;
+    color: #eee; }
+  .nav-primary .genesis-nav-menu .sub-menu a {
+    background-color: #333;
+    color: #eee; } }
+
+/*--------------------------------------------- */
+/* ## Nav Visual Styling
+// FIXME ALL STYLING MAY NOT BE NECESSARY
+// ADAPTED FROM GENESIS SAMPLE THEME
+------------------------------------------------*/
+.genesis-nav-menu .menu-item {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: left; }
+
+.genesis-nav-menu a {
+  color: #333;
+  display: block;
+  padding: 32px 20px;
+  text-decoration: none; }
+
+.genesis-nav-menu a:focus,
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+  color: #c3251d;
+  text-decoration: underline; }
+
+.genesis-nav-menu .sub-menu {
+  border-top: 1px solid #eee;
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -ms-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+  width: 200px;
+  z-index: 99; }
+
+.genesis-nav-menu .sub-menu a {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-top: 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 20px;
+  position: relative;
+  width: 200px;
+  word-wrap: break-word; }
+
+.genesis-nav-menu .sub-menu .sub-menu {
+  margin: -56px 0 0 199px; }
+
+.genesis-nav-menu .menu-item:hover {
+  position: static; }
+
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+  left: auto;
+  opacity: 1; }
+
+.genesis-nav-menu > .first > a {
+  padding-left: 0; }
+
+.genesis-nav-menu > .last > a {
+  padding-right: 0; }
+
+.genesis-nav-menu > .right {
+  float: right; }
+
+/*--------------------------------------------- */
+/* ## Screen Reader Text
+* adapted from genesis-sample theme from Studiopress
+--------------------------------------------- */
+.screen-reader-shortcut,
+.screen-reader-text,
+.screen-reader-text span {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; }
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.genesis-nav-menu .search input[type="submit"]:focus,
+.widget_search input[type="submit"]:focus {
+  background: #fff;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #333;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  height: auto;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
+.more-link {
+  position: relative; }
+
+/* # Skip Links
+* adapted from genesis-sample theme from Studiopress
+---------------------------------------------------------------------------------------------------- */
+.genesis-skip-link {
+  margin: 0; }
+
+.genesis-skip-link li {
+  height: 0;
+  list-style: none;
+  width: 0; }
+
+/* Display outline on focus */
+:focus {
+  color: #333;
+  outline: #ccc solid 1px; }
+
+.site-footer {
+  background-color: green;
+  height: 5rem; }

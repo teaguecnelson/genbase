@@ -13,6 +13,22 @@ load_child_theme_textdomain( 'genbase' );
 
 add_action( 'genesis_setup', 'genbase_setup', 15 );
 
+// Enques the JS script for mobile nav
+// Based on Robin Cornett's solution for mobile menu
+// https://robincornett.com/genesis-responsive-menu/
+// Required Scripts and Styles
+add_action( 'wp_enqueue_scripts', 'leaven_load_scripts', 15 );
+function leaven_load_scripts() {
+	// Responsive Navigation
+	wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0' );
+	wp_enqueue_script( 'leaven-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+	$output = array(
+		'mainMenu' => __( 'Menu', 'leaven' ),
+		'subMenu'  => __( 'Menu', 'leaven' ),
+	);
+	wp_localize_script( 'leaven-responsive-menu', 'LeavenL10n', $output );
+}
+
 /**
 * theme setup
 *

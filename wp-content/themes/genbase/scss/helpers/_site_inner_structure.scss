@@ -1,0 +1,36 @@
+.site-inner,
+.wrap {
+	margin: 0 auto;
+}
+
+.site-inner {
+	word-wrap: break-word;
+}
+
+.content-sidebar-wrap {
+	@include makeRow($no-padding:true);
+	@include breakpoint($medium) {
+        margin: 0 2rem;
+    }
+}
+
+.content-sidebar .content,
+.sidebar-content .content {
+	@include makeColumn(sm, $size:12, $offset:0);
+	@include makeColumn(md, $size:9, $offset:0);
+    @include makeColumn(lg, $size:8, $offset:0);
+	display: flex;
+	background-color: blue;
+}
+
+.content-sidebar .sidebar,
+.sidebar-content .sidebar {
+	@include makeColumn(sm, $size:12, $offset:0);
+	@include makeColumn(md, $size:3, $offset:0);
+    @include makeColumn(lg, $size:4, $offset:0);
+    display: flex;
+}
+
+.full-width-content .content {
+	width: 100%;
+}
