@@ -23,13 +23,14 @@
 // Atoms
 
 // Molecules
-@import "molecules/home_hero";
 
 // Organisms
 @import "organisms/header";
 @import "organisms/sidebars";
+@import "organisms/footer_widgets";
 @import "organisms/footer";
 @import "organisms/post";
+@import "organisms/content";
 
 // Pages
 @import "pages/front_page";

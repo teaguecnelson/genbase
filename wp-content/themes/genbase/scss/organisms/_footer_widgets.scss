@@ -1,0 +1,71 @@
+.footer-widgets {
+	background-color: $main-blue;
+	padding: $pre-footer-padding;
+}
+
+div .footer-widgets .wrap {
+	@include makeRow($no-padding:true);
+	margin: $small-site-content-margin;
+	@include breakpoint($medium) {
+        margin: $site-content-margin;
+    }
+}
+
+div .footer-widgets-1 {
+	@include makeColumn(sm, $size:12, $offset:0);
+	@include makeColumn(md, $size:5, $offset:1);
+	@include makeColumn(lg, $size:4, $offset:2);
+	display: flex;
+	color: $white;
+/*	border: 1px solid white;*/
+}
+
+div .footer-widgets-2 {
+	@include makeColumn(sm, $size:12, $offset:0);
+	@include makeColumn(md, $size:3, $offset:0);
+	@include makeColumn(lg, $size:2, $offset:0);
+	display: flex;
+	color: $white;
+/*	border: 1px solid yellow;*/
+}
+
+div .footer-widgets-3 {
+	@include makeColumn(sm, $size:12, $offset:0);
+	@include makeColumn(md, $size:3, $offset:0);
+	@include makeColumn(lg, $size:2, $offset:0);
+	display: flex;
+	color: $white;
+/*	border: 1px solid green;*/
+}
+
+.footer-contact-decoration {
+	width: 50%;
+	height: 2px;
+	background-color: $yellow;
+}
+
+.footer-widgets-1 .widget-wrap {
+	padding: 0.25rem 0 0 0;
+}
+
+.menu-footer-links-1-container .menu-item {
+	padding: 0.25rem 0rem;
+	list-style-type: none;
+}
+
+.menu-footer-links-1-container .menu-item a {
+	color: $white;
+	text-decoration: none;
+	border-top: 1px solid $yellow;
+}
+
+.menu-footer-links-2-container .menu-item {
+	padding: 0.25rem 0rem;
+	list-style-type: none;
+}
+
+.menu-footer-links-2-container .menu-item a {
+	color: $white;
+	text-decoration: none;
+	border-top: 1px solid $yellow;
+}

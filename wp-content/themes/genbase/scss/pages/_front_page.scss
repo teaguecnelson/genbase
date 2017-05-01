@@ -1,0 +1,20 @@
+.home-hero {
+	display: block;
+}
+
+.hero-welcome {
+	background-image: url("././images/sleeping_home.png");
+	background-size: cover;
+	height: $home-hero-height;
+	color: $white;
+}
+
+.three-up-cards {
+	background-color: green;
+	height: $home-hero-height;
+}
+
+.core-mission-section {
+	background-color: $light-grey;
+	height: $home-hero-height;
+}

@@ -13,6 +13,16 @@ load_child_theme_textdomain( 'genbase' );
 
 add_action( 'genesis_setup', 'genbase_setup', 15 );
 
+// Add afer hero widget area.
+add_action( 'genesis_after_header', 'genbase_after_header_widget_area' );
+
+// Display featured image within post
+add_action( 'genesis_before_entry', 'featured_post_image' );
+function featured_post_image() {
+  	if ( ! is_singular( 'post' ) )  return;
+	the_post_thumbnail('post-image');
+}
+
 // Enques the JS script for mobile nav
 // Based on Robin Cornett's solution for mobile menu
 // https://robincornett.com/genesis-responsive-menu/
@@ -61,13 +71,23 @@ function genbase_setup() {
 		'skip-links',
 	) );
 
+	// Add support for custom header.
+	add_theme_support( 'custom-header', array(
+		'width'           => 600,
+		'height'          => 160,
+		'header-selector' => '.site-title a',
+		'header-text'     => false,
+		'flex-height'     => true,
+	) );
+
 	// Add theme support for footer widgets.
 	add_theme_support( 'genesis-footer-widgets', 3 );
-
+	
 	// Unregister layouts that use a secondary sidebar. 
 	genesis_unregister_layout( 'content-sidebar-sidebar' );
 	genesis_unregister_layout( 'sidebar-content-sidebar' );
 	genesis_unregister_layout( 'sidebar-sidebar-content' );
+	genesis_unregister_layout( 'sidebar-content' );
 
 	// Unregister secondary sidebar. 
 	unregister_sidebar( 'sidebar-alt' );
@@ -75,7 +95,25 @@ function genbase_setup() {
 	// Add theme widget areas.
 	include_once( get_stylesheet_directory() . '/includes/widget_areas.php' );
 
+	// Customize the footer credits
+	Add_filter( 'genesis_footer_creds_text', 'custom_footer_creds_text' );
+	function custom_footer_creds_text() {
+		$creds = 'SleepSurroundings [footer_copyright] &middot; All Rights Reserved';
+		return $creds;
+	}
+
+	// Add after_header_widget_area
+	function genbase_after_header_widget_area() {
+		genesis_widget_area( 'after-header-widget-area',
+			array(
+				//
+			)
+		);
+	}
+
 }
+
+
 
 
 

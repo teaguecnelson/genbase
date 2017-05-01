@@ -12,6 +12,13 @@
 // Register front page widget areas. 
 genesis_register_sidebar( array(
 'id'            => 'home-hero-section',
-'name'          => __( 'Home Hero', 'genbase' ),
+'name'          => __( 'Front Page', 'genbase' ),
 'description'   => __( 'This is a widget area that will show on the front page', 'genbase' ),
+) );
+
+// Register after-header-widget-area. 
+genesis_register_sidebar( array(
+	'id'			=> 'after-header-widget-area',
+	'name'			=> __( 'After Header Widget Area', 'genbase' ),
+	'description'	=> __( 'This is a widget area for after the site header.', 'genbase' ),
 ) );

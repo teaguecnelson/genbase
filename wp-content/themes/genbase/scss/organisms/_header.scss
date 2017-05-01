@@ -1,27 +1,73 @@
 .site-header {
 	height: $header-height;
 	background-color: $header-color;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid $beige;
 }
 
 .site-header .wrap {
-	@include makeRow($no-padding:true);
 	height: $header-height;
-	width: 100%;
-	margin: auto;
+	margin: 0 0;
+	@include breakpoint($medium) {
+        margin: $site-content-margin;
+    }
 }	
 
 .title-area {
-	@include makeColumn(md, $size:4, $offset:0);
-	display: flex;
-	border: 1px solid black;
+	width: 100%;
+/*	border: 1px solid black;*/
+	margin: 0 auto;
+	@include breakpoint($medium) {
+        width: 225px;
+        float: left;
+    }
 }
 
 .header-widget-area {
-	@include makeColumn(sm, $size:12, $offset:0);
-	@include makeColumn(md, $size:8, $offset:0);
-	display: flex;
-	border: 1px solid blue;
+	width: 100%;
+/*	border: 1px solid blue;*/
+	@include breakpoint($medium) {
+        width: 730px;
+        float: right;
+    }
+}
+
+.nav-header {
+	background-color: $white;
+	margin: 0;
+	@include breakpoint($medium) {
+		background-color: transparent;
+    }
+}
+
+.site-title {
+	height: $header-height;
+	margin: 0;
+}
+
+.js-superfish {
+	margin: 0;
+}
+
+.site-title a,
+.site-title a:focus,
+.site-title a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+.header-image .site-title > a {
+	background-position: center !important;
+	background-size: contain !important;
+}
+
+// FIXME SHOULD DISPLAY FOR SEO
+.site-description {
+	display: none;
+}
+
+// Div with a clear to separeate header from page content
+.after-header-clear {
+	clear: both;
 }
 
 /*--------------------------------------------- */
@@ -36,6 +82,7 @@
 .menu-toggle {
 	display: none;
 	visibility: hidden;
+	border: none;
 }
 
 @media only screen and (max-width: $medium) {
@@ -65,14 +112,16 @@
 		background-color: transparent;
 	}
 
+// FIXME STYLE THIS TO MOVE TOGGLE INTO HEADER ON MOBILE
 	.menu-toggle {
 		background-color: #333;
 		position: relative;
-		padding: 20px 12px;
+		padding: 15px 12px;
 		right: 0;
 		z-index: 1000;
 		color: white;
 		width: 100%;
+		height: $menu-toggle-height;
 	}
 
 	.menu-toggle:before,
@@ -122,10 +171,7 @@
 	}
 
 	.genesis-nav-menu .menu-item a {
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		width: 100%;
-		padding: 20px;
 	}
 
 	.genesis-nav-menu .menu-item:hover {
@@ -158,7 +204,6 @@
 	.genesis-nav-menu .sub-menu a {
 		border-left: none;
 		border-right: none;
-		padding-left: 40px;
 		color: #eee;
 	}
 
@@ -173,29 +218,54 @@
 // FIXME ALL STYLING MAY NOT BE NECESSARY
 // ADAPTED FROM GENESIS SAMPLE THEME
 ------------------------------------------------*/
+.genesis-nav-menu a {
+	color: $text-color;
+	display: block;
+	padding: 20px 0;
+/*	border: 1px solid red;*/
+}
+
+.genesis-nav-menu .sub-menu a {
+	color: $text-color;
+}
+
 @include breakpoint($medium) {
 
 	.widget .widget_nav_menu {
 		height: $header-height;
 	}
 
+	.header-widget-area .genesis-nav-menu {
+		margin: 0;
+	}
+
 	.genesis-nav-menu .menu-item {
 		height: $header-height;
 		display: inline-block;
-		margin-bottom: 0;
-		padding-bottom: 0;
-		text-align: left;
+		margin: 0;
+		padding: 0;
+		text-align: right;
 	}
 
-	#menu-all-pages {
-		margin: 0 0;
+	// FIXME DON'T USE ID
+	#menu-primary-nav-menu {
+		padding: 0;
 	}
 
 	.genesis-nav-menu a {
 		color: #333;
 		display: block;
-		padding: 25.5px 20px;
 		text-decoration: none;
+		font-size: $medium-point-size * 0.95;
+    	padding: 25.5px 0.7rem;
+	}
+
+	.genesis-nav-menu a:hover {
+	    border-bottom: 3px solid $yellow;
+	}
+
+	.genesis-nav-menu .sub-menu a:hover {
+		border: none;
 	}
 
 	.genesis-nav-menu a:focus,
@@ -203,42 +273,52 @@
 	.genesis-nav-menu .current-menu-item > a,
 	.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 	.genesis-nav-menu .sub-menu .current-menu-item > a:hover  {
-		color: #c3251d;
+		color: $text-color;
 		text-decoration: underline;
 	}
 
 	.genesis-nav-menu .sub-menu {
-		border-top: 1px solid #eee;
+		background-color: $light-grey;
 		left: -9999px;
-		opacity: 0;
 		position: absolute;
 		-webkit-transition: opacity .4s ease-in-out;
 		-moz-transition:    opacity .4s ease-in-out;
 		-ms-transition:     opacity .4s ease-in-out;
 		-o-transition:      opacity .4s ease-in-out;
 		transition:         opacity .4s ease-in-out;
-		width: 200px;
+		width: 150px;
 		z-index: 99;
+		padding: 0;
 	}
+
+	.genesis-nav-menu .sub-menu:hover {
+		border-top: 3px solid $yellow;
+	}	
 
 	.genesis-nav-menu .sub-menu a {
-		background-color: #fff;
-		border: 1px solid #eee;
-		border-top: 0;
-		font-size: 14px;
-		font-size: 1.4rem;
-		padding: 20px;
+		padding: 15px 0;
+		padding-left: 25px;
 		position: relative;
-		width: 200px;
+		width: 125px;
 		word-wrap: break-word;
+		text-align: left;
+		font-size: $medium-point-size * 0.95;
 	}
 
-	.genesis-nav-menu .sub-menu .sub-menu {
+	// NOT BEING USED
+/*	.genesis-nav-menu .sub-menu .sub-menu {
 		margin: -56px 0 0 199px;
+	}*/
+
+	.genesis-nav-menu .menu-item {
+		height: 50px;
+		border-top: 1px solid $white;
+		border-bottom: 1px solid $white;
 	}
 
 	.genesis-nav-menu .menu-item:hover {
 		position: static;
+
 	}
 
 	.genesis-nav-menu .menu-item:hover > .sub-menu {
@@ -317,9 +397,3 @@
 	color: #333;
 	outline: #ccc solid 1px;
 }
-
-
-
-
-
-

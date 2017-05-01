@@ -3,6 +3,8 @@
 /**
 * Front Page Template
 *
+* Template Name: Front-Page
+*
 * @package		genbase
 * @author 		Teague Nelson
 * @link 		http://www.teaguenelson.com/

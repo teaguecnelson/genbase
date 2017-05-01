@@ -1,16 +1,24 @@
 //Variables
 
+// Global
+$site-content-margin: 0 4rem;
+$small-site-content-margin: 0 7px;
+
 // Typography see _typography in helpers
 
 // Main Colors
-$main-blue: #2c98bc;
+$main-blue: #00237F;
 $darken-main-blue: darken($main-blue, 20%);
+$yellow: #FDD200;
 $charcoal: #4d4c4c;
 $text-color: #2c2d30;
+$beige: #F8F7F5;
 
 // Base Colors
 $black: #000;
 $white: #fefefe;
+$light-grey: #f5f5f5;
+$medium-grey: #C5C7C9;
 $primary-mask: transparentize($main-blue, 0.3);
 $transparent: rgba(255, 255, 255, 0.1);
 
@@ -30,8 +38,16 @@ $fa-exclamation-triangle: '\f071';
 
 
 // Organism Variables
+$menu-toggle-height: 55px;
 $header-height: 75px;
-$header-color: green;
-$footer-height: 5rem;
+$header-color: $white;
+$header-max-logo-height: 69px;
+$header-logo-padding: 3px 0;
+$pre-footer-padding: 0.75rem 0;
+$footer-height: 8rem;
+$footer-color: #5B5B5B;
+$footer-wrap-height: 2.5rem;
+$footer-wrap-padding: 2.25rem 0;
 $home-hero-height: 75vh;
+
 

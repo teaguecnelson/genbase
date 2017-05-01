@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Roboto');
 
 // Font Sizes
-$base-font-size: 18px;
-$small-point-size: $base-font-size * 0.825;
+$base-font-size: 16.5px;
+$medium-point-size: $base-font-size * 0.96;
+$small-point-size: $base-font-size * 0.85;
 
 // Font Families
 $primary-font: 'Roboto', Helvetica, Arial, sans-serif;

@@ -1,4 +1,13 @@
 .site-footer {
-	background-color: green;
+	background-color: $footer-color;
 	height: $footer-height;
+	color: $medium-grey;
 }
+
+.site-footer .wrap {
+	padding: $footer-wrap-padding;
+	height: $footer-wrap-height;
+	text-align: center;
+}
+
+// Customize Footer Credits Text in Functions.php.
