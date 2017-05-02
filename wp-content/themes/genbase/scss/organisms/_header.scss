@@ -10,21 +10,23 @@
 	@include breakpoint($medium) {
         margin: $site-content-margin;
     }
+    @include breakpoint($large) {
+        margin: $header-large-site-content-margin;
+    }
 }	
 
 .title-area {
-	width: 100%;
-/*	border: 1px solid black;*/
-	margin: 0 auto;
+	max-width: 210px;
+	padding: 0.8rem 0rem;
 	@include breakpoint($medium) {
-        width: 225px;
+        max-width: 225px;
         float: left;
     }
 }
 
 .header-widget-area {
 	width: 100%;
-/*	border: 1px solid blue;*/
+	margin: auto;
 	@include breakpoint($medium) {
         width: 730px;
         float: right;
@@ -39,9 +41,9 @@
     }
 }
 
+// FIXME: DISPLAY IS CURRENTLY NONE
 .site-title {
-	height: $header-height;
-	margin: 0;
+	display: none;
 }
 
 .js-superfish {
@@ -60,7 +62,7 @@
 	background-size: contain !important;
 }
 
-// FIXME SHOULD DISPLAY FOR SEO
+// FIXME: DISPLAY IS CURRENTLY NONE
 .site-description {
 	display: none;
 }

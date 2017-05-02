@@ -81,11 +81,11 @@
   margin-right: -0.5rem;
   padding-left: 2rem;
   padding-right: 2rem; }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .content-sidebar-wrap, .page-template-front-page .three-up-section, .page-template-front-page .featuredpost .widget-wrap, div .footer-widgets .wrap, .page-template-page_blog .post {
       margin-left: -0.75rem;
       margin-right: -0.75rem; } }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .content-sidebar-wrap, .page-template-front-page .three-up-section, .page-template-front-page .featuredpost .widget-wrap, div .footer-widgets .wrap, .page-template-page_blog .post {
       padding-left: 3rem;
       padding-right: 3rem; } }
@@ -102,7 +102,7 @@
   -webkit-flex-shrink: 0;
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .page-template-front-page .mission-wrapper, .content-sidebar .content,
     .sidebar-content .content, .content-sidebar .sidebar,
     .sidebar-content .sidebar, .page-template-front-page .card-wrapper, .page-template-front-page .featuredpost .widget-wrap .widget-title, .page-template-front-page .post, div .footer-widgets-1, div .footer-widgets-2, div .footer-widgets-3, .page-template-page_blog .site-inner {
@@ -141,7 +141,7 @@
 .page-template-front-page .mission-wrapper {
   margin-left: 8.33333%; }
 
-@media only screen and (min-width: 1090px) {
+@media only screen and (min-width: 990px) {
   .content-sidebar .sidebar,
   .sidebar-content .sidebar, div .footer-widgets-2, div .footer-widgets-3 {
     flex-basis: 25%;
@@ -179,7 +179,7 @@
   div .footer-widgets-1, .page-template-page_blog .site-inner {
     margin-left: 8.33333%; } }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1280px) {
   div .footer-widgets-2, div .footer-widgets-3 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
@@ -244,16 +244,19 @@ main {
 .site-inner {
   word-wrap: break-word;
   margin-top: 55px; }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .site-inner {
       margin-top: 0; } }
 
 .content-sidebar-wrap {
   padding: 0;
-  margin: 0 7px; }
-  @media only screen and (min-width: 1090px) {
+  margin: 0 1rem; }
+  @media only screen and (min-width: 990px) {
     .content-sidebar-wrap {
-      margin: 0 4rem; } }
+      margin: 0 3rem; } }
+  @media only screen and (min-width: 1280px) {
+    .content-sidebar-wrap {
+      margin: 0 8rem; } }
 
 .content-sidebar .content,
 .sidebar-content .content {
@@ -294,11 +297,11 @@ h1 {
   margin-bottom: 0.25em;
   font-weight: 900;
   color: #555555; }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h1 {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem; } }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h1 {
       font-size: 2.15rem;
       line-height: 3.15rem; } }
@@ -310,11 +313,11 @@ h2 {
   margin-bottom: 0.25em;
   font-weight: 900;
   color: #555555; }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h2 {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem; } }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h2 {
       font-size: 2rem; } }
 
@@ -325,11 +328,11 @@ h3 {
   margin-bottom: 0.25em;
   font-weight: 900;
   color: #555555; }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h3 {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem; } }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h3 {
       font-size: 1.55rem;
       line-height: 2.35rem; } }
@@ -341,11 +344,11 @@ h4 {
   margin-bottom: 0.25em;
   font-weight: 900;
   color: #555555; }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h4 {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem; } }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h4 {
       font-size: 1.35rem; } }
 
@@ -356,11 +359,11 @@ h5 {
   margin-bottom: 0.25em;
   font-weight: 900;
   color: #555555; }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h5 {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem; } }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h5 {
       font-size: 1.2rem; } }
 
@@ -371,14 +374,14 @@ h6 {
   margin-bottom: 0.25em;
   font-weight: 900;
   color: #555555; }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     h6 {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem; } }
 
 p {
   font-family: "Source Sans Pro", serif; }
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 1280px) {
     p {
       font-size: 1.14rem;
       line-height: 1.6rem; } }
@@ -634,7 +637,7 @@ table {
   margin: 0rem auto;
   color: white;
   font-size: 2.85rem; }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .page-template-front-page .hero-header {
       font-size: 5.1rem; } }
 
@@ -645,7 +648,7 @@ table {
   color: white;
   font-size: 1.25rem;
   font-weight: 700; }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .page-template-front-page .hero-subheader {
       font-size: 1.4rem;
       margin: 2.25rem auto; } }
@@ -657,7 +660,7 @@ table {
 
 .page-template-front-page .card-wrapper {
   padding-bottom: 3.25rem; }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .page-template-front-page .card-wrapper {
       padding-bottom: 1rem; } }
 
@@ -714,23 +717,25 @@ table {
 .site-header .wrap {
   height: 75px;
   margin: 0 0; }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .site-header .wrap {
-      margin: 0 4rem; } }
+      margin: 0 3rem; } }
+  @media only screen and (min-width: 1280px) {
+    .site-header .wrap {
+      margin: 0 5rem; } }
 
 .title-area {
-  width: 100%;
-  /*	border: 1px solid black;*/
-  margin: 0 auto; }
-  @media only screen and (min-width: 1090px) {
+  max-width: 210px;
+  padding: 0.8rem 0rem; }
+  @media only screen and (min-width: 990px) {
     .title-area {
-      width: 225px;
+      max-width: 225px;
       float: left; } }
 
 .header-widget-area {
   width: 100%;
-  /*	border: 1px solid blue;*/ }
-  @media only screen and (min-width: 1090px) {
+  margin: auto; }
+  @media only screen and (min-width: 990px) {
     .header-widget-area {
       width: 730px;
       float: right; } }
@@ -738,13 +743,12 @@ table {
 .nav-header {
   background-color: #fefefe;
   margin: 0; }
-  @media only screen and (min-width: 1090px) {
+  @media only screen and (min-width: 990px) {
     .nav-header {
       background-color: transparent; } }
 
 .site-title {
-  height: 75px;
-  margin: 0; }
+  display: none; }
 
 .js-superfish {
   margin: 0; }
@@ -778,7 +782,7 @@ table {
   visibility: hidden;
   border: none; }
 
-@media only screen and (max-width: 1090px) {
+@media only screen and (max-width: 990px) {
   nav {
     display: none;
     position: relative; }
@@ -882,7 +886,7 @@ table {
 .genesis-nav-menu .sub-menu a {
   color: #2c2d30; }
 
-@media only screen and (min-width: 1090px) {
+@media only screen and (min-width: 990px) {
   .widget .widget_nav_menu {
     height: 75px; }
   .header-widget-area .genesis-nav-menu {
@@ -1011,10 +1015,10 @@ table {
 
 div .footer-widgets .wrap {
   padding: 0;
-  margin: 0 7px; }
-  @media only screen and (min-width: 1090px) {
+  margin: 0 1rem; }
+  @media only screen and (min-width: 990px) {
     div .footer-widgets .wrap {
-      margin: 0 4rem; } }
+      margin: 0 3rem; } }
 
 div .footer-widgets-1 {
   display: flex;
@@ -1038,6 +1042,9 @@ div .footer-widgets-3 {
 
 .footer-widgets-1 .widget-wrap {
   padding: 0.25rem 0 0 0; }
+
+.footer-widgets-1 .widget-wrap h4 {
+  color: white; }
 
 .menu-footer-links-1-container .menu-item {
   padding: 0.25rem 0rem;
@@ -1120,3 +1127,27 @@ div .footer-widgets-3 {
 
 .page-template-page_blog .pagination-previous, .page-template-page_blog .pagination-next {
   padding: 0.5rem; }
+
+.post-template-default {
+  /*	// Position post info above post title
+	// https://gist.github.com/srikat/8469623
+	// FIXME: Remove action not working so is display none in css
+	// See Functions.php*/ }
+  .post-template-default .post {
+    max-width: 660px; }
+  .post-template-default .entry-header {
+    padding: 0rem 0rem 1.5rem 0rem;
+    border-bottom: 3px solid #e5e5e5;
+    margin-bottom: 1.7rem; }
+  .post-template-default .entry-meta:nth-child(3) {
+    display: none; }
+  .post-template-default .entry-title {
+    text-align: left; }
+  .post-template-default .entry-content, .post-template-default .entry-comments h3, .post-template-default .entry-comments .comment-list {
+    max-width: 565px;
+    float: right; }
+  .post-template-default .entry-comments h3, .post-template-default .entry-comments .comment-list {
+    max-width: 565px;
+    float: right; }
+  .post-template-default .entry-footer {
+    display: none; }

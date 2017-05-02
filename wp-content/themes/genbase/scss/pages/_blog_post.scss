@@ -1,0 +1,48 @@
+.post-template-default {
+
+	.post {
+		max-width: 660px;
+
+	}
+
+	.entry-header {
+		padding: 0rem 0rem 1.5rem 0rem;
+		border-bottom: 3px solid $subtle-grey;
+		margin-bottom: 1.7rem;
+	}
+
+/*	// Position post info above post title
+	// https://gist.github.com/srikat/8469623
+	// FIXME: Remove action not working so is display none in css
+	// See Functions.php*/
+	.entry-meta:nth-child(3) {
+		display: none;
+	}
+
+	.entry-title {
+		text-align: left;
+	}
+
+	.entry-meta {
+
+	}
+
+	.entry-content, .entry-comments h3, .entry-comments .comment-list {
+		max-width: 565px;
+		float: right;
+	}
+
+	.entry-comments h3, .entry-comments .comment-list {
+		max-width: 565px;
+		float: right;
+	}
+
+
+	
+
+	// FIXME!
+	.entry-footer {
+		display: none;
+	}
+
+}

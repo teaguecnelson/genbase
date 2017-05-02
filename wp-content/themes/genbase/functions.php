@@ -13,18 +13,29 @@ load_child_theme_textdomain( 'genbase' );
 
 add_action( 'genesis_setup', 'genbase_setup', 15 );
 
+// Defines Clickable Logo and adds Blog Info to title
+function special_site_logo() {?><a id="sitelogo" href="<?php bloginfo( 'url' ); ?>"><img src="http://localhost:8888/wp-content/uploads/2017/04/cropped-ss_logo.png" alt="<?php bloginfo('name')?>" title="<?php bloginfo('name')?>" /></a><?php ;
+}
+add_action( 'genesis_site_title','special_site_logo',5,1);
+
 // Add afer hero widget area.
 add_action( 'genesis_after_header', 'genbase_after_header_widget_area' );
 
 // Reposition Featured Image on Blog Listing Page.
 add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
 
+// Position post info above post title
+// https://gist.github.com/srikat/8469623
+// FIXME: Remove action not working so is display none in css
+// remove_action( 'genesis_entry_header', 'genesis_post_info' );
+add_action( 'genesis_entry_header', 'genesis_post_info', 9 );
+
 // Display featured image within post
-add_action( 'genesis_before_entry', 'featured_post_image' );
-function featured_post_image() {
-  	if ( ! is_singular( 'post' ) )  return;
-	the_post_thumbnail('post-image');
-}
+// add_action( 'genesis_before_entry', 'featured_post_image' );
+// function featured_post_image() {
+//   	if ( ! is_singular( 'post' ) )  return;
+// 	the_post_thumbnail('post-image');
+// }
 
 // Add Image Sizes.
 add_image_size( 'featured-image', 470, 320, TRUE );
