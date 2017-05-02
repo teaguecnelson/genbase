@@ -1,0 +1,73 @@
+.page-template-page_blog {
+	
+	.site-inner {
+		@include makeColumn(md, $size:10, $offset:1);
+	}
+
+	.blog-template-description {
+		padding: 2rem;
+	}
+
+	.post {
+		@include makeRow($no-padding:true);
+		padding: 0.5rem 0;
+		border-bottom: 2px solid $subtle-grey;
+	}
+
+	.entry-image-link {
+
+	}
+
+	.entry-header {
+		padding: 5rem 0rem 0rem 2rem;
+	}
+
+	// FIXME: TO ADD IN EXCERPT TO REPLACE META DATA (SEE GREATIST BLOG)
+	.entry-header .entry-meta {
+/*		display: none;*/
+	}
+
+    // FIXME: SHOULD BE REMOVED IF NOT DISPLAYING
+	.entry-header .entry-comments-link {
+		display: none;
+	}
+
+	.entry-header .entry-title {
+		text-align: left;
+	}
+
+	.entry-header .entry-title a {
+		text-decoration: none;
+	}
+	
+
+	// FIXME: TO ADD IN EXCERPT TO REPLACE META DATA (SEE GREATIST BLOG)
+	.entry-content {
+		display: none;  
+	}
+
+	// FIXME: SHOULD BE REMOVED IF NOT DISPLAYING
+	.entry-content .entry-image-link {
+		display: none;
+	}
+
+	// FIXME: SHOULD BE REMOVED IF NOT DISPLAYING
+	.entry-content .more-link {
+		display: none;
+	}
+
+	// FIXME: SHOULD BE REMOVED IF NOT DISPLAYING
+	.entry-footer {
+		display: none;
+	}
+
+	.pagination {
+		text-align: center;
+		margin: 3rem auto;
+	}
+
+	.pagination-previous, .pagination-next {
+		padding: 0.5rem;
+	}
+
+}

@@ -21,8 +21,16 @@
 @import "helpers/site_inner_structure";
 
 // Atoms
+@import "atoms/buttons";
+@import "atoms/text";
+@import "atoms/table";
 
 // Molecules
+@import "molecules/hero_welcome_widget";
+@import "molecules/three_up_widget";
+@import "molecules/mission_statement_widget";
+@import "molecules/front_latest_articles_widget";
+
 
 // Organisms
 @import "organisms/header";
@@ -34,3 +42,4 @@
 
 // Pages
 @import "pages/front_page";
+@import "pages/blog_page";

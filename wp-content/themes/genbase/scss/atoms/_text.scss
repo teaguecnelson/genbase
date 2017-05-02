@@ -1,0 +1,67 @@
+@mixin header($size) {
+    font-size: $size;
+    font-family: $primary-font;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    font-weight: 900;
+    color: $heading-color;
+
+    @include breakpoint($large) {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+
+h1 {
+    @include header(2rem);
+    @include breakpoint($large) {
+        font-size: 2.15rem;
+        line-height: 3.15rem;
+    }
+}
+
+h2 {
+    @include header(1.5rem);
+    @include breakpoint($large) {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    @include header(1.25rem);
+    @include breakpoint($large) {
+        font-size: 1.55rem;
+        line-height: 2.35rem;
+    }
+}
+
+h4 {
+    @include header(1.1rem);
+    @include breakpoint($large) {
+        font-size: 1.35rem;
+    }
+}
+
+h5 {
+    @include header(1.1rem);
+    @include breakpoint($large) {
+        font-size: 1.2rem;
+    }
+}
+
+h6 {
+    @include header($small-point-size);
+}
+
+p {
+    font-family: $secondary-font;
+    @include breakpoint($large) {
+        font-size: 1.14rem;
+        line-height: 1.6rem;
+    }
+}
+
+li {
+    line-height: 1.5;    
+}

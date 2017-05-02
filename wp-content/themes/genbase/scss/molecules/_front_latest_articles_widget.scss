@@ -1,0 +1,37 @@
+.page-template-front-page {
+
+	.featuredpost .widget-wrap {
+		@include makeRow($no-padding:true);
+		padding: 1% 10% 1% 10%;
+	}
+
+	.featuredpost .widget-wrap .widget-title {
+		@include makeColumn(sm, $size:12, $offset:0);
+		@include makeColumn(md, $size:12, $offset:0);
+		text-align: left;
+		padding: 2rem 1rem;
+	}
+
+	.post {
+		@include makeColumn(sm, $size:12, $offset:0);
+		@include makeColumn(md, $size:6, $offset:0);
+		padding: 0 1rem 2rem 1rem;
+	}
+
+	.post:nth-child(4) {
+    	display: none;
+	}
+
+	.post .entry-image {
+		width: 100%;
+	}
+
+	.post .entry-title {
+		text-align: left;
+		text-decoration: none;
+	}
+
+	.post .entry-title a {
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,41 @@
+.page-template-front-page {
+
+	.hero-welcome {
+		background-image: url("././images/sleeping_home.png");
+		background-size: cover;
+	}
+
+	.hero-message-wrap {
+		padding-top: 9%;
+		padding-bottom: 12%;
+		text-align: center;
+	}
+
+	.hero-header {
+		font-family: cabin;
+		text-align: center;
+		margin: 0rem auto;
+		color: white;
+		font-size: 2.85rem;
+		@include breakpoint($medium) {
+	        font-size: 5.1rem;
+	    }
+	}
+
+	.hero-subheader {
+		font-family: $secondary-font;
+		text-align: center;
+		margin: 1.75rem auto;
+		color: white;
+		font-size: 1.25rem;
+		font-weight: 700;
+		@include breakpoint($medium) {
+	        font-size: 1.4rem;
+	        margin: 2.25rem auto;
+	    }
+	}
+
+	.hero-button {
+	}
+
+}

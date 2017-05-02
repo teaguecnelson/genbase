@@ -4,6 +4,7 @@
 * Marketing Page Template
 *
 * Template Name: Marketing
+* (This is all Pages that aren't posts or archive pages)
 *
 * @package		genbase
 * @author 		Teague Nelson

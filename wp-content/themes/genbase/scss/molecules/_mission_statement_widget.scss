@@ -1,0 +1,23 @@
+.page-template-front-page {
+
+	.core-mission-section {
+		background-color: $light-grey;
+		text-align: center;
+		padding: 2.75rem 0rem;
+		
+	}
+
+	.mission-wrapper {
+		@include makeColumn(sm, $size:10, $offset:1);
+	/*	@include makeColumn(md, $size:10, $offset:0);*/
+	}
+
+	.mission-header {
+		text-align: center;
+	}
+
+	.mission-text {
+
+	}
+
+}

@@ -16,12 +16,18 @@ add_action( 'genesis_setup', 'genbase_setup', 15 );
 // Add afer hero widget area.
 add_action( 'genesis_after_header', 'genbase_after_header_widget_area' );
 
+// Reposition Featured Image on Blog Listing Page.
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
+
 // Display featured image within post
 add_action( 'genesis_before_entry', 'featured_post_image' );
 function featured_post_image() {
   	if ( ! is_singular( 'post' ) )  return;
 	the_post_thumbnail('post-image');
 }
+
+// Add Image Sizes.
+add_image_size( 'featured-image', 470, 320, TRUE );
 
 // Enques the JS script for mobile nav
 // Based on Robin Cornett's solution for mobile menu

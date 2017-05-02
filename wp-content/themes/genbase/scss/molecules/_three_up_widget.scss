@@ -1,0 +1,36 @@
+.page-template-front-page {
+
+	.three-up-section {
+		@include makeRow($no-padding:true);
+		background-color: $white;
+		padding: 5% 10% 6% 10%;
+	}
+
+	.card-wrapper {
+		@include makeColumn(sm, $size:12, $offset:0);
+		@include makeColumn(md, $size:4, $offset:0);
+		@include makeColumn(lg, $size:4, $offset:0);
+		padding-bottom: 3.25rem;
+		@include breakpoint($medium) {
+	        padding-bottom: 1rem;
+	    }
+	}
+
+	.card {
+		padding: 0rem 0.75rem;
+		text-align: center;
+	}
+
+	.card-img {
+		width: 100%;
+	}
+
+	.card-title {
+		margin: 1rem auto 2rem auto;
+
+	}
+
+	.card-button {
+	}
+
+}

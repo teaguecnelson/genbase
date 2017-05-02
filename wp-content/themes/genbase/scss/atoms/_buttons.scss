@@ -1,0 +1,33 @@
+@mixin coreButton($button-color) {
+	font-family: $primary-font;
+	font-size: $base-font-size;
+	color: $button-hover-text-color;
+	text-align: center;
+ 	align-items: flex-start;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	white-space: nowrap;
+	border: 2.5px solid $button-color;
+	border-radius: 0;
+	width: 95%;
+	max-width: $button-max-width;
+	cursor: pointer;
+	background-color: lighten($button-color, 3%);
+	padding: 0.75rem 1.25rem;
+	margin: 0 auto;
+	height: auto;
+    white-space: normal;
+    word-wrap: break-word;
+
+	&:hover, &:focus {
+    	color: $button-hover-text-color;
+    	background-color: darken($button-color, 10%);
+    	border: 2.5px solid darken($button-color, 10%);
+  	}
+}
+
+.primary-button {
+	@include coreButton($primary-button-color);
+}
+
+
