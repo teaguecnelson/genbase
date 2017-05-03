@@ -697,10 +697,10 @@ table {
 
 .site-header .wrap {
   height: 75px;
-  margin: 0 0;
-  /*	@include breakpoint($header-medium) {
-        margin: $site-content-margin;
-    }*/ }
+  margin: 0 0; }
+  @media only screen and (min-width: 1059px) {
+    .site-header .wrap {
+      padding: 0 1.75rem; } }
   @media only screen and (min-width: 1280px) {
     .site-header .wrap {
       margin: 0 5rem; } }
@@ -709,7 +709,7 @@ table {
   max-width: 230px;
   padding: 0.8rem 0rem;
   margin: 0 1rem; }
-  @media only screen and (min-width: 1010px) {
+  @media only screen and (min-width: 1059px) {
     .title-area {
       max-width: 230px;
       float: left; } }
@@ -717,7 +717,7 @@ table {
 .header-widget-area {
   width: 100%;
   margin: auto; }
-  @media only screen and (min-width: 1010px) {
+  @media only screen and (min-width: 1059px) {
     .header-widget-area {
       width: 730px;
       float: right; } }
@@ -725,7 +725,7 @@ table {
 .nav-header {
   background-color: #fefefe;
   margin: 0; }
-  @media only screen and (min-width: 1010px) {
+  @media only screen and (min-width: 1059px) {
     .nav-header {
       background-color: transparent; } }
 
@@ -735,7 +735,7 @@ table {
 .js-superfish {
   margin: 0;
   border-bottom: 1px solid #C5C7C9; }
-  @media only screen and (min-width: 1010px) {
+  @media only screen and (min-width: 1059px) {
     .js-superfish {
       border-bottom: none; } }
 
@@ -769,7 +769,7 @@ table {
   visibility: hidden;
   border: none; }
 
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 1059px) {
   nav {
     display: none;
     position: relative; }
@@ -870,7 +870,7 @@ table {
 .genesis-nav-menu .sub-menu a {
   color: #000000; }
 
-@media only screen and (min-width: 1010px) {
+@media only screen and (min-width: 1059px) {
   .widget .widget_nav_menu {
     height: 75px; }
   .header-widget-area .genesis-nav-menu {

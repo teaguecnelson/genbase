@@ -6,9 +6,9 @@
 .site-header .wrap {
 	height: $header-height;
 	margin: 0 0;
-/*	@include breakpoint($header-medium) {
-        margin: $site-content-margin;
-    }*/
+	@include breakpoint($header-medium) {
+		padding: 0 1.75rem;
+    }
     @include breakpoint($large) {
         margin: $header-large-site-content-margin;
     }
