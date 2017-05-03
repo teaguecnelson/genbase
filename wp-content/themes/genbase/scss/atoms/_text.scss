@@ -67,6 +67,10 @@ a {
   &:hover {
     color: $yellow;
   }
+
+  &:active, &:focus {
+    outline: 0;
+  }
 }
 
 li {

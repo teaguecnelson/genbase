@@ -21,10 +21,10 @@
 		padding-top: 0.5rem;
 		@include makeColumn(md, $size:6, $offset:0);
 		@include breakpoint($medium) {
-        	padding: 4.35rem 0rem 0rem 2rem;
+        	padding: 4.35rem 0rem 0rem 1.5rem;
     	}
     	@include breakpoint($large) {
-        	padding: 4.5rem 0rem 0rem 2rem;
+        	padding: 4.5rem 0rem 0rem 0.75rem;
     	}
 	}
 

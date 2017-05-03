@@ -386,6 +386,8 @@ a {
   text-decoration: none; }
   a:hover {
     color: #FDD200; }
+  a:active, a:focus {
+    outline: 0; }
 
 li {
   line-height: 1.5; }
@@ -621,7 +623,7 @@ table {
   font-size: 2.85rem; }
   @media only screen and (min-width: 950px) {
     .page-template-front-page .hero-header {
-      font-size: 5.1rem; } }
+      font-size: 4.9rem; } }
 
 .page-template-front-page .hero-subheader {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -632,7 +634,7 @@ table {
   font-weight: 700; }
   @media only screen and (min-width: 950px) {
     .page-template-front-page .hero-subheader {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin: 2.25rem auto; } }
 
 .page-template-front-page .three-up-section {
@@ -1086,10 +1088,10 @@ div .footer-widgets-3 {
   padding-top: 0.5rem; }
   @media only screen and (min-width: 950px) {
     .page-template-page_blog .entry-header {
-      padding: 4.35rem 0rem 0rem 2rem; } }
+      padding: 4.35rem 0rem 0rem 1.5rem; } }
   @media only screen and (min-width: 1280px) {
     .page-template-page_blog .entry-header {
-      padding: 4.5rem 0rem 0rem 2rem; } }
+      padding: 4.5rem 0rem 0rem 0.75rem; } }
 
 .page-template-page_blog .entry-header .entry-meta:nth-child(1) {
   display: none; }
