@@ -31,11 +31,11 @@ add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
 add_action( 'genesis_entry_header', 'genesis_post_info', 9 );
 
 // Display featured image within post
-// add_action( 'genesis_before_entry', 'featured_post_image' );
-// function featured_post_image() {
-//   	if ( ! is_singular( 'post' ) )  return;
-// 	the_post_thumbnail('post-image');
-// }
+add_action( 'genesis_before_entry', 'featured_post_image' );
+function featured_post_image() {
+  	if ( ! is_singular( 'post' ) )  return;
+	the_post_thumbnail('post-image');
+}
 
 // Add Image Sizes.
 add_image_size( 'featured-image', 470, 320, TRUE );

@@ -3,10 +3,9 @@
 	margin: 0 auto;
 }
 
-// FIXME WHEN MENU TOGGLE MOVES, REMOVE THE TOGGLE HEIGHT
 .site-inner {
 	word-wrap: break-word;
-	margin-top: $menu-toggle-height;
+	border-top: 1px solid $beige;
 	@include breakpoint($medium) {
         margin-top: 0;
     }
@@ -26,7 +25,7 @@
 .content-sidebar .content,
 .sidebar-content .content {
 	@include makeColumn(sm, $size:12, $offset:0);
-	@include makeColumn(md, $size:9, $offset:0);
+	@include makeColumn(md, $size:8, $offset:0);
     @include makeColumn(lg, $size:8, $offset:0);
 	display: flex;
 }
@@ -34,7 +33,7 @@
 .content-sidebar .sidebar,
 .sidebar-content .sidebar {
 	@include makeColumn(sm, $size:12, $offset:0);
-	@include makeColumn(md, $size:3, $offset:0);
+	@include makeColumn(md, $size:4, $offset:0);
     @include makeColumn(lg, $size:4, $offset:0);
 
 }

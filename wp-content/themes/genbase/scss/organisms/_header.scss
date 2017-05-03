@@ -1,25 +1,25 @@
 .site-header {
 	height: $header-height;
 	background-color: $header-color;
-	border-bottom: 1px solid $beige;
 }
 
 .site-header .wrap {
 	height: $header-height;
 	margin: 0 0;
-	@include breakpoint($medium) {
+/*	@include breakpoint($header-medium) {
         margin: $site-content-margin;
-    }
+    }*/
     @include breakpoint($large) {
         margin: $header-large-site-content-margin;
     }
 }	
 
 .title-area {
-	max-width: 210px;
+	max-width: 230px;
 	padding: 0.8rem 0rem;
-	@include breakpoint($medium) {
-        max-width: 225px;
+	margin: $small-site-content-margin;
+	@include breakpoint($header-medium) {
+        max-width: 230px;
         float: left;
     }
 }
@@ -27,7 +27,7 @@
 .header-widget-area {
 	width: 100%;
 	margin: auto;
-	@include breakpoint($medium) {
+	@include breakpoint($header-medium) {
         width: 730px;
         float: right;
     }
@@ -36,7 +36,7 @@
 .nav-header {
 	background-color: $white;
 	margin: 0;
-	@include breakpoint($medium) {
+	@include breakpoint($header-medium) {
 		background-color: transparent;
     }
 }
@@ -48,6 +48,10 @@
 
 .js-superfish {
 	margin: 0;
+	border-bottom: 1px solid $medium-grey;
+	@include breakpoint($header-medium) {
+		border-bottom: none;
+    }
 }
 
 .site-title a,
@@ -70,6 +74,7 @@
 // Div with a clear to separeate header from page content
 .after-header-clear {
 	clear: both;
+	height: 0px;
 }
 
 /*--------------------------------------------- */
@@ -87,7 +92,7 @@
 	border: none;
 }
 
-@media only screen and (max-width: $medium) {
+@media only screen and (max-width: $header-medium) {
 
 	nav {
 		display: none;
@@ -114,22 +119,21 @@
 		background-color: transparent;
 	}
 
-// FIXME STYLE THIS TO MOVE TOGGLE INTO HEADER ON MOBILE
+    // FIXME STYLE THIS TO MOVE TOGGLE INTO HEADER ON MOBILE
 	.menu-toggle {
-		background-color: #333;
-		position: relative;
-		padding: 15px 12px;
-		right: 0;
+		position: absolute;
+		right: 2rem;
+		top: 0;
 		z-index: 1000;
-		color: white;
-		width: 100%;
+		color: $text-color;
+		width: $menu-toggle-height;
 		height: $menu-toggle-height;
 	}
 
 	.menu-toggle:before,
 	.menu-toggle.activated:before {
 		display: inline-block;
-		font: normal normal normal 20px FontAwesome;
+		font: normal normal normal 25px FontAwesome;
 		text-rendering: auto;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -137,7 +141,6 @@
 		-ms-transform: translate(0, 0);
 		transform: translate(0, 0);
 		content: "\f0c9";
-		padding-right: 12px;
 	}
 
 	.sub-menu-toggle {
@@ -224,14 +227,13 @@
 	color: $text-color;
 	display: block;
 	padding: 20px 0;
-/*	border: 1px solid red;*/
 }
 
 .genesis-nav-menu .sub-menu a {
 	color: $text-color;
 }
 
-@include breakpoint($medium) {
+@include breakpoint($header-medium) {
 
 	.widget .widget_nav_menu {
 		height: $header-height;
@@ -258,7 +260,7 @@
 		color: #333;
 		display: block;
 		text-decoration: none;
-		font-size: $medium-point-size * 0.95;
+		font-size: $small-point-size;
     	padding: 25.5px 0.7rem;
 	}
 
@@ -298,8 +300,7 @@
 	}	
 
 	.genesis-nav-menu .sub-menu a {
-		padding: 15px 0;
-		padding-left: 25px;
+		padding: 15px 0px 15px 0px;
 		position: relative;
 		width: 125px;
 		word-wrap: break-word;

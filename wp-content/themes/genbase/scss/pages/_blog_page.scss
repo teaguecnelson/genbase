@@ -1,8 +1,4 @@
 .page-template-page_blog {
-	
-	.site-inner {
-		@include makeColumn(md, $size:10, $offset:1);
-	}
 
 	.blog-template-description {
 		padding: 2rem;
@@ -12,19 +8,29 @@
 		@include makeRow($no-padding:true);
 		padding: 0.5rem 0;
 		border-bottom: 2px solid $subtle-grey;
+		width: 100%;
 	}
 
 	.entry-image-link {
-
+		width: 100%;
+		@include makeColumn(md, $size:6, $offset:0);
 	}
 
 	.entry-header {
-		padding: 5rem 0rem 0rem 2rem;
+		width: 100%;
+		padding-top: 0.5rem;
+		@include makeColumn(md, $size:6, $offset:0);
+		@include breakpoint($medium) {
+        	padding: 4.35rem 0rem 0rem 2rem;
+    	}
+    	@include breakpoint($large) {
+        	padding: 4.5rem 0rem 0rem 2rem;
+    	}
 	}
 
 	// FIXME: TO ADD IN EXCERPT TO REPLACE META DATA (SEE GREATIST BLOG)
-	.entry-header .entry-meta {
-/*		display: none;*/
+	.entry-header .entry-meta:nth-child(1) {
+		display: none;
 	}
 
     // FIXME: SHOULD BE REMOVED IF NOT DISPLAYING

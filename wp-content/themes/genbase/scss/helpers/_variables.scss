@@ -2,9 +2,10 @@
 
 // Global
 $small-site-content-margin: 0 1rem;
-$site-content-margin: 0 3rem;
+$site-content-margin: 0 4rem;
 $large-site-content-margin: 0 8rem;
 $header-large-site-content-margin: 0 5rem;
+$header-medium: 1010px;
 
 // Typography see _typography in helpers
 
@@ -13,8 +14,10 @@ $main-blue: #00237F;
 $darken-main-blue: darken($main-blue, 20%);
 $yellow: #FDD200;
 $charcoal: #4d4c4c;
-$text-color: #2c2d30;
+/*$text-color: #2c2d30;*/
+$text-color: #000000;
 $heading-color: #555555;
+$post-heading-color: #000000;
 $beige: #F8F7F5;
 
 // Base Colors
@@ -45,7 +48,7 @@ $button-hover-text-color: $white;
 
 
 // Organism Variables
-$menu-toggle-height: 55px;
+$menu-toggle-height: 75px;
 $header-height: 75px;
 $header-color: $white;
 $header-max-logo-height: 69px;

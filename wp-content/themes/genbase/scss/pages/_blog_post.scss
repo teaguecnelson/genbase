@@ -1,8 +1,27 @@
 .post-template-default {
 
-	.post {
-		max-width: 660px;
+	.site-inner {
+		padding-top: 1rem;
+	}
 
+	h1 {
+		color: $post-heading-color;
+	}
+
+	.content {
+		@include breakpoint($medium) {
+        	padding-right: 3.5rem;
+    	}
+    	@include breakpoint($large) {
+        	padding-right: 4rem;
+    	}
+	}
+
+	.post, .attachment-post-image {
+		width: 100%;
+		@include breakpoint($medium) {
+        	max-width: 660px;
+    	}
 	}
 
 	.entry-header {
@@ -28,21 +47,44 @@
 	}
 
 	.entry-content, .entry-comments h3, .entry-comments .comment-list {
-		max-width: 565px;
-		float: right;
+		width: 100%;
+/*		@include breakpoint($medium) {
+        	width: 460px;
+        	float: right;
+    	}*/
+		@include breakpoint($medium) {
+        	max-width: 565px;
+			float: right;
+    	}
 	}
 
 	.entry-comments h3, .entry-comments .comment-list {
-		max-width: 565px;
-		float: right;
+		width: 100%;
+/*		@include breakpoint($medium) {
+        	width: 460px;
+        	float: right;
+    	}*/
+		@include breakpoint($medium) {
+        	max-width: 565px;
+			float: right;
+    	}
 	}
 
-
-	
-
-	// FIXME!
+	// FIXME SHOULD REMOVE IF NOT DISPLAYED
 	.entry-footer {
 		display: none;
 	}
 
+	.sidebar {
+		background-color: $light-grey;
+		padding: 0;
+		@include breakpoint($medium) {
+        	width: 300px;
+        	float: right;
+    	}
+		@include breakpoint($large) {
+        	width: 370px;
+			float: right;
+    	}
+	}
 }

@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Roboto|Cabin');
+@import url('https://fonts.googleapis.com/css?family=Neuton|Roboto|Cabin');
 
 // Font Sizes
-$base-font-size: 16.5px;
+$base-font-size: 18px;
 $medium-point-size: $base-font-size * 0.96;
-$small-point-size: $base-font-size * 0.85;
+$small-point-size: $base-font-size * 0.825;
 
 // Font Families
 $primary-font: 'Roboto', Helvetica, Arial, sans-serif;
-$secondary-font:'Source Sans Pro', serif;
+$secondary-font:'Neuton', serif;
 
 /* --------  Extends Regular Fonts  -------- */
 
