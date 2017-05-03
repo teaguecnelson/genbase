@@ -2,12 +2,10 @@
 Currently only using #rwd-table-large*/
 
 
-
-$table-primary-color: #008cba;
 $gray-color: #ddd;
 $medium-up: 600px;
 $large-up: 1000px;
-$global-radius: 4px;
+$global-radius: 2px;
 
 
 //SUPER BASIC PAGE STYLING
@@ -25,19 +23,21 @@ table {
 	float: left;
    margin: 0 0 2em;
 	thead {
-		border-bottom: 3px solid $table-primary-color;
+		background-color: $light-blue;
+		/*border-bottom: 3px solid $light-blue;*/
 		th {
-			padding: 0.35em 0 .35em;
-       font-weight: 400;
+			padding: 1rem;
+       		font-weight: 400;
 			text-align: left;
 			@extend %primary-font-regular;
 			font-size: 1.25em;
+			color: $white;
 		}
 		
 	}
 
 	tbody {
-		border-bottom: 3px solid $table-primary-color;
+		border-bottom: 3px solid $light-blue;
 		tr {
 			border-bottom: 2px solid #ddd;
        
@@ -45,12 +45,12 @@ table {
 				padding: .75em 0;
 
 				a {
-					color: $table-primary-color;
+					color: $light-blue;
 					text-decoration: none;
 					display: inline-block;
 					margin: 0 .5em 0 0;
 					&:hover, &:active, &:focus {
-						color: darken($table-primary-color, 10%);
+						color: darken($light-blue, 10%);
 						border: none;
 					}
 				}
@@ -74,10 +74,12 @@ table {
 		width: 100%;
 
 		thead {
-			border-bottom: 3px solid $table-primary-color;
+			background-color: $light-blue;
+			/*border-bottom: 3px solid $light-blue;*/
 			th {
+				color: $white;
+				padding: 1rem;
 			}
-			
 		}
 
 		tbody {
@@ -113,7 +115,7 @@ table {
        border: 1px solid $gray-color;
 			box-shadow: 0px 2px 5px 0px $gray-color;
 			border-radius: $global-radius;
-			border-top: 5px solid $table-primary-color;
+			border-top: 5px solid $light-blue;
 
 			td {
 				padding: .5em .5em .5em 50%;
@@ -149,7 +151,7 @@ table {
 	border: none;
 
   tbody {
-    border-bottom: 3px solid $table-primary-color;
+    border-bottom: 3px solid $light-blue;
   }
 	th, td {
 		display: table-cell; 

@@ -4,6 +4,13 @@
 		padding-top: 1rem;
 	}
 
+	.content-sidebar-wrap {
+		max-width: 1170px;
+		@include breakpoint($large) {
+        	margin: 0 auto;
+    	}
+	}
+
 	h1 {
 		color: $post-heading-color;
 	}
